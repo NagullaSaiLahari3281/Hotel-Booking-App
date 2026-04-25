@@ -127,7 +127,7 @@ button:hover {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .menu {
+  .rooms {
     grid-template-columns: 1fr;
   }
 
