@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   margin: 0;
   background: #f4f4f4;
   text-align: center;
@@ -9,9 +9,10 @@ h1 {
   background: #222;
   color: white;
   padding: 15px;
+  margin: 0;
 }
 
-/* Date */
+/* Date Section */
 .date-box {
   display: flex;
   justify-content: center;
@@ -32,7 +33,7 @@ h1 {
 /* Rooms */
 .rooms {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Desktop */
   gap: 15px;
   width: 90%;
   margin: auto;
@@ -81,6 +82,11 @@ button {
   padding: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #cc0000;
 }
 
 /* Popup */
@@ -90,45 +96,52 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   background: white;
   padding: 20px;
   border-radius: 12px;
-
-  width: 280px;        
-  max-width: 90%;      
-
+  width: 280px;
+  max-width: 90%;
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-  z-index: 1000;       
+  z-index: 1000;
 }
 
 /* Success */
 .popup.success {
   background: #e6ffe6;
-  border: 1px solid green;
+  border-left: 6px solid green;
 }
 
 /* Error */
 .popup.error {
   background: #ffe6e6;
-  border: 1px solid red;
+  border-left: 6px solid red;
 }
 
-/* Responsive */
+/* Tablet */
 @media (max-width: 900px) {
   .rooms {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .rooms {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
   }
 
   .date-box {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    width: 95%;
+  }
+
+  .form input,
+  .form textarea {
+    width: 95%;
   }
 }
