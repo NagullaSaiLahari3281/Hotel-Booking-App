@@ -127,9 +127,10 @@ button:hover {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .rooms {
-    grid-template-columns: 1fr; 
+  .menu {
+    grid-template-columns: 1fr;
   }
+
 
   .date-box {
     flex-direction: column;
