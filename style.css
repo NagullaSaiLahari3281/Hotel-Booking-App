@@ -1,0 +1,134 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  background: #222;
+  color: white;
+  padding: 15px;
+}
+
+/* Date */
+.date-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.date-box div {
+  text-align: left;
+}
+
+.date-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Rooms */
+.rooms {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 90%;
+  margin: auto;
+}
+
+.room {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.room:hover {
+  transform: scale(1.05);
+}
+
+.room.selected {
+  border: 2px solid green;
+  background: #e6ffe6;
+}
+
+/* Form */
+.form {
+  width: 90%;
+  max-width: 400px;
+  margin: 30px auto;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.form input,
+.form textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+  background: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+  width: 280px;        
+  max-width: 90%;      
+
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  z-index: 1000;       
+}
+
+/* Success */
+.popup.success {
+  background: #e6ffe6;
+  border: 1px solid green;
+}
+
+/* Error */
+.popup.error {
+  background: #ffe6e6;
+  border: 1px solid red;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rooms {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .date-box {
+    flex-direction: column;
+  }
+}

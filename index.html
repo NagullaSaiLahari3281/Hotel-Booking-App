@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏨 Hotel Booking</h1>
+
+<!-- Dates -->
+<div class="date-box">
+  <div>
+    <label>📅 Check-in</label>
+    <input type="date" id="checkin">
+  </div>
+
+  <div>
+    <label>📅 Check-out</label>
+    <input type="date" id="checkout">
+  </div>
+</div>
+
+<!-- Rooms -->
+<div class="rooms">
+  <div class="room" onclick="selectRoom(this, 'Deluxe Room', 2800)">
+    <h3>Deluxe Room</h3>
+    <p>₹2800</p>
+  </div>
+
+  <div class="room" onclick="selectRoom(this, 'Suite Room', 4800)">
+    <h3>Suite Room</h3>
+    <p>₹4800</p>
+  </div>
+
+  <div class="room" onclick="selectRoom(this, 'Standard Room', 2000)">
+    <h3>Standard Room</h3>
+    <p>₹2000</p>
+  </div>
+</div>
+
+<!-- Form -->
+<form onsubmit="submitBooking(event)" class="form">
+  <input type="text" id="name" placeholder="Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="tel" id="phone" placeholder="Phone">
+  <textarea id="request" placeholder="Special Request"></textarea>
+  <button type="submit">Book Now</button>
+</form>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <p id="popupMsg"></p>
+  <button onclick="closePopup()">OK</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
